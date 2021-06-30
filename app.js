@@ -15,19 +15,12 @@ window.addEventListener('resize',function(){
 
 function init(){
 
-    // save et restore
-    ctx.fillRect(0,0,150,150);
-    ctx.save();
+    ctx.translate(50,50);
+    ctx.fillRect(0,0,100,150);
+    ctx.fillRect(100,100,100,150);
+     //réintialiser
+     ctx.setTransform(1,0,0,1,0,0); 
+     ctx.fillRect(100,100,100,150);
 
-    ctx.fillStyle="red";
-    ctx.fillRect(15,15,120,120);
-
-    ctx.save();
-
-    ctx.fillStyle = "blue";
-    ctx.fillRect(30,30,90,90);
-
-    ctx.restore();
-    ctx.fillRect(45,46,60,60);
 }
 init();
